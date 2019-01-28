@@ -14,6 +14,7 @@
 		54552DBB21FCFBFD009140F2 /* ListExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54552DBA21FCFBFD009140F2 /* ListExampleTests.swift */; };
 		54552DC721FD956C009140F2 /* ListEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54552DC621FD956C009140F2 /* ListEntryTableViewCell.swift */; };
 		54552DC921FD9FD1009140F2 /* Needed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54552DC821FD9FD1009140F2 /* Needed.swift */; };
+		54552DCB21FDA246009140F2 /* ListEntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54552DCA21FDA246009140F2 /* ListEntryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		54552DBC21FCFBFD009140F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54552DC621FD956C009140F2 /* ListEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEntryTableViewCell.swift; sourceTree = "<group>"; };
 		54552DC821FD9FD1009140F2 /* Needed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Needed.swift; sourceTree = "<group>"; };
+		54552DCA21FDA246009140F2 /* ListEntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEntryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				54552DA921FCFBFC009140F2 /* Main.storyboard */,
 				54552DC621FD956C009140F2 /* ListEntryTableViewCell.swift */,
 				54552DC821FD9FD1009140F2 /* Needed.swift */,
+				54552DCA21FDA246009140F2 /* ListEntryTableViewController.swift */,
 				54552DB121FCFBFD009140F2 /* Info.plist */,
 			);
 			path = ListExample;
@@ -209,6 +212,7 @@
 			files = (
 				54552DC921FD9FD1009140F2 /* Needed.swift in Sources */,
 				54552DC721FD956C009140F2 /* ListEntryTableViewCell.swift in Sources */,
+				54552DCB21FDA246009140F2 /* ListEntryTableViewController.swift in Sources */,
 				54552DA621FCFBFC009140F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

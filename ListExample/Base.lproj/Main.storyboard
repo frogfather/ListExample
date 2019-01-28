@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--List Entry Table View Controller-->
         <scene sceneID="h4x-aH-GkR">
             <objects>
-                <tableViewController id="FkU-4L-cZa" sceneMemberID="viewController">
+                <tableViewController id="FkU-4L-cZa" customClass="ListEntryTableViewController" customModule="ListExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N6C-dz-ygF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,34 +25,46 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="Item required" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GL6-jH-ahZ">
-                                            <rect key="frame" x="16" y="32" width="343" height="47"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="✔️" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-1s-C1K">
-                                            <rect key="frame" x="321" y="11" width="38" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="Shop name" borderStyle="bezel" placeholder="Shop name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jHG-g5-yX3">
-                                            <rect key="frame" x="16" y="11" width="304" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="Shop name" borderStyle="bezel" placeholder="Shop name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jHG-g5-yX3">
+                                            <rect key="frame" x="16" y="11" width="286" height="20"/>
                                             <accessibility key="accessibilityConfiguration">
                                                 <accessibilityTraits key="traits" notEnabled="YES"/>
                                             </accessibility>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Item required" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GL6-jH-ahZ">
+                                            <rect key="frame" x="16" y="31" width="343" height="48"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="✔️" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZX6-1s-C1K">
+                                            <rect key="frame" x="302" y="11" width="57" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="57" id="ikk-ZL-2lM"/>
+                                            </constraints>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
                                     </subviews>
                                     <color key="backgroundColor" red="0.95294117647058818" green="0.93725490196078431" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="ZX6-1s-C1K" firstAttribute="trailing" secondItem="0s9-UG-dkH" secondAttribute="trailingMargin" id="IQs-gw-1He"/>
+                                        <constraint firstItem="ZX6-1s-C1K" firstAttribute="leading" secondItem="jHG-g5-yX3" secondAttribute="trailing" id="ROY-wI-7cf"/>
+                                        <constraint firstItem="ZX6-1s-C1K" firstAttribute="trailing" secondItem="GL6-jH-ahZ" secondAttribute="trailing" id="S5D-HF-ZPw"/>
+                                        <constraint firstItem="jHG-g5-yX3" firstAttribute="bottom" secondItem="ZX6-1s-C1K" secondAttribute="bottom" id="XLm-ea-WJE"/>
+                                        <constraint firstItem="jHG-g5-yX3" firstAttribute="leading" secondItem="GL6-jH-ahZ" secondAttribute="leading" id="cwM-Pj-vBq"/>
+                                        <constraint firstItem="jHG-g5-yX3" firstAttribute="top" secondItem="0s9-UG-dkH" secondAttribute="topMargin" id="d3F-vS-hgX"/>
+                                        <constraint firstItem="jHG-g5-yX3" firstAttribute="top" secondItem="ZX6-1s-C1K" secondAttribute="top" id="hsp-3e-MvN"/>
+                                        <constraint firstItem="jHG-g5-yX3" firstAttribute="leading" secondItem="0s9-UG-dkH" secondAttribute="leadingMargin" id="mm1-Q3-cFR"/>
+                                        <constraint firstItem="GL6-jH-ahZ" firstAttribute="top" secondItem="jHG-g5-yX3" secondAttribute="bottom" id="qbQ-Za-vrd"/>
+                                        <constraint firstItem="GL6-jH-ahZ" firstAttribute="bottom" secondItem="0s9-UG-dkH" secondAttribute="bottomMargin" id="v0V-E2-x53"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="bought" destination="ZX6-1s-C1K" id="13b-9V-nQW"/>
+                                    <outlet property="bought" destination="ZX6-1s-C1K" id="95m-o1-5g5"/>
                                     <outlet property="itemName" destination="GL6-jH-ahZ" id="fsn-je-IVM"/>
                                     <outlet property="shopName" destination="jHG-g5-yX3" id="TiE-9k-NI2"/>
                                 </connections>
